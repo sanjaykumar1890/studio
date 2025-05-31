@@ -1,10 +1,11 @@
+
 'use client';
 
 import { useState, useEffect } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Calendar, ChevronLeft, ChevronRight, Clock } from 'lucide-react';
-import { format, addDays, subDays } from 'date-fns';
+import { format, addDays, subDays, isValid } from 'date-fns';
 
 interface ClassDetail {
   id: string;
@@ -30,21 +31,50 @@ const mockTimetable: Record<string, ClassDetail[]> = {
 };
 
 export default function TimetablePage() {
-  const [currentDate, setCurrentDate] = useState(new Date());
+  const [currentDate, setCurrentDate] = useState<Date | null>(null);
   const [selectedDateClasses, setSelectedDateClasses] = useState<ClassDetail[]>([]);
 
   useEffect(() => {
-    const dateString = format(currentDate, 'yyyy-MM-dd');
-    setSelectedDateClasses(mockTimetable[dateString] || []);
+    setCurrentDate(new Date());
+  }, []); 
+
+  useEffect(() => {
+    if (currentDate && isValid(currentDate)) {
+      const dateString = format(currentDate, 'yyyy-MM-dd');
+      setSelectedDateClasses(mockTimetable[dateString] || []);
+    } else {
+      setSelectedDateClasses([]);
+    }
   }, [currentDate]);
 
   const handlePrevDay = () => {
-    setCurrentDate(prev => subDays(prev, 1));
+    if (currentDate && isValid(currentDate)) {
+      setCurrentDate(prev => subDays(prev!, 1));
+    }
   };
 
   const handleNextDay = () => {
-    setCurrentDate(prev => addDays(prev, 1));
+    if (currentDate && isValid(currentDate)) {
+      setCurrentDate(prev => addDays(prev!, 1));
+    }
   };
+
+  if (!currentDate) {
+    return (
+      <div className="space-y-6">
+        <Card className="shadow-lg">
+          <CardHeader>
+            <CardTitle className="font-headline text-2xl flex items-center"><Calendar className="mr-2 h-6 w-6 text-primary" /> Daily Timetable</CardTitle>
+            <CardDescription>View your class schedule.</CardDescription>
+          </CardHeader>
+          <CardContent className="text-center py-10">
+            <Calendar className="mx-auto h-12 w-12 text-muted-foreground mb-4" />
+            <p className="text-xl font-semibold text-muted-foreground">Loading timetable...</p>
+          </CardContent>
+        </Card>
+      </div>
+    );
+  }
 
   return (
     <div className="space-y-6">
@@ -55,14 +85,14 @@ export default function TimetablePage() {
         </CardHeader>
         <CardContent>
           <div className="flex items-center justify-between mb-6 p-3 border rounded-md bg-secondary">
-            <Button variant="outline" size="icon" onClick={handlePrevDay} aria-label="Previous day">
+            <Button variant="outline" size="icon" onClick={handlePrevDay} aria-label="Previous day" disabled={!currentDate}>
               <ChevronLeft className="h-5 w-5" />
             </Button>
             <div className="text-center">
               <p className="text-lg font-semibold text-primary">{format(currentDate, 'EEEE')}</p>
               <p className="text-sm text-muted-foreground">{format(currentDate, 'MMMM d, yyyy')}</p>
             </div>
-            <Button variant="outline" size="icon" onClick={handleNextDay} aria-label="Next day">
+            <Button variant="outline" size="icon" onClick={handleNextDay} aria-label="Next day" disabled={!currentDate}>
               <ChevronRight className="h-5 w-5" />
             </Button>
           </div>
