@@ -44,7 +44,8 @@ export default function AboutUsPage() {
               </p>
             </div>
             <Image 
-              src="https://placehold.co/600x400.png" 
+              src="https://placehold.co/600x400.png"
+              // src="college.jpg" 
               alt="ACE College Campus" 
               width={600} 
               height={400} 

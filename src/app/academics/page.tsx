@@ -5,11 +5,12 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { BookOpenText, Users, ShieldCheck, Trophy } from 'lucide-react';
 
 const subjects = [
-  { id: 1, name: 'Advanced Calculus', faculty: 'Dr. Emily Carter' },
-  { id: 2, name: 'Data Structures & Algorithms', faculty: 'Prof. John Smith' },
-  { id: 3, name: 'Quantum Physics', faculty: 'Dr. Alan Grant' },
-  { id: 4, name: 'Modern Literature', faculty: 'Prof. Sarah Connor' },
-  { id: 5, name: 'Organic Chemistry', faculty: 'Dr. Ian Malcolm' },
+  { id: 1, name: 'Discrete Mathematics', faculty: 'Mr. G. Parwateeshwar' },
+  { id: 2, name: 'BEFA', faculty: 'Dr. M. Kondal Rao' },
+  { id: 3, name: 'OS', faculty: 'Mrs. A Sarala Devi' },
+  { id: 4, name: 'DBMS', faculty: 'Dr. P. Chiranjeevi' },
+  { id: 5, name: 'SE', faculty: 'Mr. Shaik Nagur Vali' },
+  { id: 5, name: 'SDC', faculty: 'Mr.S.Revanth' },
 ];
 
 const otherActivities = [

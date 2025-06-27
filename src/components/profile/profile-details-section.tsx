@@ -13,9 +13,9 @@ interface DetailItem {
 }
 
 const personalDetails: DetailItem[] = [
-  { id: 'email', title: 'Email', value: 'alex.johnson@example.com', icon: User },
-  { id: 'phone', title: 'Phone', value: '+1-202-555-0104', icon: User },
-  { id: 'address', title: 'Address', value: '123 Main St, Anytown, USA', icon: User },
+  { id: 'email', title: 'Email', value: '23AG1A6736@gmail.com', icon: User },
+  { id: 'phone', title: 'Phone', value: '+91 9398415471', icon: User },
+  { id: 'address', title: 'Address', value: 'Telangana,Hyderabad', icon: User },
 ];
 
 const serviceLinks: DetailItem[] = [

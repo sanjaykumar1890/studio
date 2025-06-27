@@ -6,12 +6,12 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Button } from '@/components/ui/button';
 
 const data = [
-  { name: 'Present', value: 75 },
-  { name: 'Absent', value: 5 },
+  { name: 'Present', value: 120 },
+  { name: 'Absent', value: 60 },
   // { name: 'Total Working Days', value: 100 } // This is the sum, not a segment typically
 ];
-const totalWorkingDays = 100;
-const daysPresent = 75;
+const totalWorkingDays = 180;
+const daysPresent = 120;
 const attendancePercentage = (daysPresent / totalWorkingDays) * 100;
 
 

@@ -16,18 +16,18 @@ interface ClassDetail {
 }
 
 const mockTimetable: Record<string, ClassDetail[]> = {
-  '2024-07-29': [ // Example: A Monday
+  '2025-06-14': [ 
     { id: 'c1', time: '09:00 AM - 10:00 AM', subject: 'Advanced Calculus', faculty: 'Dr. Emily Carter', room: 'A-101' },
     { id: 'c2', time: '10:00 AM - 11:00 AM', subject: 'Data Structures', faculty: 'Prof. John Smith', room: 'B-203' },
     { id: 'c3', time: '11:15 AM - 12:15 PM', subject: 'Quantum Physics Lab', faculty: 'Dr. Alan Grant', room: 'Lab-3' },
     { id: 'c4', time: '02:00 PM - 03:00 PM', subject: 'Modern Literature', faculty: 'Prof. Sarah Connor', room: 'C-105' },
   ],
-  '2024-07-30': [ // Example: A Tuesday
+  '2025-06-16': [ 
     { id: 'c5', time: '09:00 AM - 10:00 AM', subject: 'Organic Chemistry', faculty: 'Dr. Ian Malcolm', room: 'ChemLab-1' },
     { id: 'c6', time: '10:00 AM - 11:00 AM', subject: 'Advanced Calculus', faculty: 'Dr. Emily Carter', room: 'A-101' },
     { id: 'c7', time: '11:15 AM - 12:15 PM', subject: 'Data Structures Lab', faculty: 'Prof. John Smith', room: 'Lab-2' },
   ],
-  // Add more dates as needed
+  
 };
 
 export default function TimetablePage() {

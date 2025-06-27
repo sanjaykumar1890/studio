@@ -13,9 +13,9 @@ export function AcademicCalendarSummary() {
         <CardContent>
           <p className="text-sm text-muted-foreground">View key dates for the semester: holidays, exams, and more.</p>
           <ul className="mt-2 text-xs space-y-1 list-disc list-inside">
-            <li>Semester Start: Aug 15, 2024</li>
-            <li>Midterm Exams: Oct 10-15, 2024</li>
-            <li>Semester End: Dec 20, 2024</li>
+            <li>Semester Start: Feb 1, 2025</li>
+            <li>Midterm Exams: April 10-15, 2025</li>
+            <li>Semester End: June 12, 2025</li>
           </ul>
         </CardContent>
       </Card>

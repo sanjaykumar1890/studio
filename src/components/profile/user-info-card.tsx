@@ -4,11 +4,11 @@ import { UserCircle } from 'lucide-react';
 
 export function UserInfoCard() {
   const student = {
-    name: 'Alex Johnson',
-    rollNo: 'STUDENT001',
+    name: 'Marepally Sanjay Kumar',
+    rollNo: '23AG1A6736',
     photoUrl: 'https://placehold.co/120x120.png',
-    program: 'B.Tech Computer Science',
-    semester: '6th Semester',
+    program: 'B.Tech Computer Science (DataScience)',
+    semester: '4th Semester',
   };
 
   return (

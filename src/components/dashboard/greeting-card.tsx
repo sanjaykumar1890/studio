@@ -34,7 +34,7 @@ export function GreetingCard() {
     <Link href="/timetable" passHref>
       <Card className="cursor-pointer hover:shadow-lg transition-shadow duration-300 ease-in-out bg-gradient-to-r from-primary to-accent text-primary-foreground">
         <CardHeader>
-          <CardTitle className="text-2xl font-headline">{greeting}, Student Name!</CardTitle>
+          <CardTitle className="text-2xl font-headline">{greeting}, Sanjay Kumar</CardTitle>
         </CardHeader>
         <CardContent>
           <p className="text-lg">{currentDateTime || 'Loading date...'}</p>

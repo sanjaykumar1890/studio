@@ -5,8 +5,8 @@ import Link from 'next/link';
 
 const contactItems = [
   { icon: Mail, label: 'Email', value: 'info@acecollege.edu', href: 'mailto:info@acecollege.edu' },
-  { icon: Phone, label: 'Phone', value: '+1 (234) 567-8900', href: 'tel:+12345678900' },
-  { icon: Globe, label: 'Website', value: 'www.acecollege.edu', href: 'https://www.acecollege.edu' },
+  { icon: Phone, label: 'Phone', value: '+91 7799996602', href: '+91 779996602' },
+  { icon: Globe, label: 'Website', value: 'www.acecollege.edu', href: 'https://www.aceenggacademy.com/' },
 ];
 
 const socialItems = [
